@@ -2,6 +2,8 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.3.
 
+Blog Application Project has two roles one is user and second one is admin , User has access to upload blog content and that content will appear on admin pending blog panel . And that blog will reflected to all users home page if and only when an admin verify that blog and change status to approved. an admin can also create another admin and do crud on it
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
