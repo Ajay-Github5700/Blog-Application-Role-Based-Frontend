@@ -1,0 +1,43 @@
+.card-text{
+    overflow: hidden; /* Hides overflowing text */
+    display: block; /* Ensures proper layout */
+    max-height: 6em; /* Adjust this based on your line height (e.g., 1.5em × 4 lines = 6em) */
+    line-height: 1.5em; /* Controls spacing between lines */
+    text-overflow: ellipsis; /* Adds '...' to truncated text */
+    white-space: normal; 
+}
+
+.body{
+    background-image: url('https://img.freepik.com/free-photo/movie-background-collage_23-2149876028.jpg?ga=GA1.1.1700682945.1715361201&semt=ais_hybrid');
+    background-size: 100%;
+}
+.sort-box{
+    margin-right: 5px;
+    width: 100px;
+    height: 39px;
+}
+
+.cat-all{
+    margin: 0px;
+    width: 100px;
+}
+
+.search{
+    margin-top: 5px;
+    margin-left:5rem;
+    width: 388px;
+    height: 38px;
+    padding-left: 0px;
+}
+
+.search-text{
+    width:185px;
+}
+
+.h3-text{
+    margin-left: 35.5rem;
+}
+
+.peg-btn{
+    margin-left: 68rem;
+}

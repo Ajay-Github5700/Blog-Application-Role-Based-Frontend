@@ -1,0 +1,42 @@
+<div>
+    <form class="bg-primary-subtle p-2 rounded-3 w-50 mx-auto" [formGroup]="blogForm">
+        <h3 class="text-center">Add Blog</h3>
+        <div class="col-12 w-50 mx-auto mt-4">
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Author</label>
+                <input type="email" class="form-control" formControlName="author" placeholder="Ajay Malge">
+                <div *ngIf="blogForm.controls['author'].touched && !blogForm.controls['author'].valid">
+                    <p *ngIf="blogForm.controls['author'].hasError('required')" class="req-valid">*Author Required</p>
+                    <p *ngIf="blogForm.controls['author'].hasError('minlength')" class="req-valid">*min 2 charecter required</p>
+            </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Title</label>
+                <input type="email" class="form-control" formControlName="title" placeholder="Blog Title">
+                <div *ngIf="blogForm.controls['title'].touched && !blogForm.controls['title'].valid">
+                    <p *ngIf="blogForm.controls['title'].hasError('required')" class="req-valid">*Title Required</p>
+                    <p *ngIf="blogForm.controls['title'].hasError('minlength')" class="req-valid">*min 2 charecter required</p>
+            </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Description</label>
+                <textarea class="form-control" formControlName="description" placeholder="Your Discription Here....!!!!" rows="3"></textarea>
+                <div *ngIf="blogForm.controls['description'].touched && !blogForm.controls['description'].valid">
+                    <p *ngIf="blogForm.controls['description'].hasError('required')" class="req-valid">*Description Required</p>
+                    <p *ngIf="blogForm.controls['description'].hasError('minlength')" class="req-valid">*min 2 charecter required</p>
+            </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Image</label>
+                <input type="file" class="form-control" formControlName="image" (change)="onFileChange($event)">
+                <div *ngIf="blogForm.controls['image'].touched && !blogForm.controls['image'].valid">
+                    <p *ngIf="blogForm.controls['image'].hasError('required')" class="req-valid">*Image Required</p>
+            </div>
+            </div>
+            <button class="btn btn-primary sub-btn" type="button" [disabled]="blogForm.invalid" (click)="onSave()">Submit</button>
+        </div>
+    </form>
+</div>

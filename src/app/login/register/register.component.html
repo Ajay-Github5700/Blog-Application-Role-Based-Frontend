@@ -1,0 +1,55 @@
+<body class="body-main">
+    <div class="container bg-success-subtle p-5 rounded-3 mx-auto">
+        @if(userIdForUpdate){<h3 class="text-center mb-4">Update User</h3>}
+        @else{<h3 class="text-center mb-4">Add User</h3>}
+        <form class="row gy-2 gx-3 align-items-center" [formGroup]="registerForm">
+            <div class="col-12">
+                <label class="visually-hidden" for="autoSizingInput">Username</label>
+                <input type="text" class="form-control" id="autoSizingInput" placeholder="@username_here"
+                    formControlName="username">
+                <div *ngIf="registerForm.controls['username'].touched && !registerForm.controls['username'].valid">
+                    <p *ngIf="registerForm.controls['username'].hasError('required')" class="req-valid">Username
+                        Required</p>
+                    <p *ngIf="registerForm.controls['username'].hasError('minlength')" class="req-valid">min 2 charecter
+                        required</p>
+                </div>
+            </div>
+            <div class="col-12">
+                <label class="visually-hidden" for="autoSizingInputGroup">Password</label>
+                <div class="input-group">
+                    <div class="input-group-text">Password</div>
+                    <input type="password" class="form-control" id="autoSizingInputGroup" placeholder="Password"
+                        formControlName="password">
+                </div>
+                <div *ngIf="registerForm.controls['password'].touched && !registerForm.controls['password'].valid">
+                    <p *ngIf="registerForm.controls['password'].hasError('required')" class="req-valid">password
+                        Required</p>
+                    <p *ngIf="registerForm.controls['password'].hasError('minlength')" class="req-valid">min 4 charecter
+                        required</p>
+                </div>
+            </div>
+            <div class="col-auto">
+                <label class="visually-hidden" for="autoSizingSelect">Preference</label>
+                <select class="form-select" id="autoSizingSelect" formControlName="role">
+                    <option disabled value="" selected>Role</option>
+                    <option value="admin">Admin</option>
+                    <option value="user">User</option>
+                </select>
+                <div *ngIf="registerForm.controls['role'].touched && !registerForm.controls['role'].valid">
+                    <p *ngIf="registerForm.controls['role'].hasError('required')" class="req-valid">Role Required</p>
+                </div>
+            </div>
+
+            <div class="col-auto">
+                @if(userIdForUpdate){
+                <button type="submit" class="btn btn-primary" (click)="onEdit()"
+                    [disabled]="registerForm.invalid">Update</button>
+                <button type="button" class="btn btn-danger ms-2" routerLink="/admin/allusers">Cancel</button>
+                }@else{
+                <button type="submit" class="btn btn-primary" (click)="onsave()"
+                    [disabled]="registerForm.invalid">Submit</button>
+                }
+            </div>
+        </form>
+    </div>
+</body>

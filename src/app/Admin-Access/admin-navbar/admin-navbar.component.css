@@ -1,0 +1,29 @@
+#admin-navbar{
+    background-color: rgb(227, 92, 240);
+    height: 60px;
+}
+
+#logout{
+    margin-left: 365px;
+    font-size: 18px;
+    background-color: darkred;
+
+}
+
+.nav-text-item{
+    font-size: 18px;
+}
+
+.cat-all{
+    width: 70px;
+}
+
+.search{
+    width: 344px;
+    height: 40px;
+    padding: 0;
+}
+
+.search-text{
+    width: 200px;
+}

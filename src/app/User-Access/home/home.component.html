@@ -1,0 +1,14 @@
+<h3 class="text-center text-primary-emphasis">Welcome To Movie Review Blogs</h3>
+<div class="d-flex flex-wrap mt-3">
+  <div class="my-2" *ngFor="let i of ApprovedBlogs">
+    <div class="card ms-2" style="width: 18rem;">
+      <img  src="{{i.image}}" style="height: 200px;" class="object-fit-cover w-100" alt="Unable to load image"> 
+      <div class="card-body">
+        <h5 class="card-title">{{i.title}}</h5>
+        <p class="card-text">{{i.description}}</p>
+        <p class="card-author text-muted fst-italic">Posted By :-{{i.author}}</p>
+        <p class="fw-lighter fst-italic">Posted on:-{{i.createdAt | date}}</p>
+      </div>
+    </div>
+  </div>
+</div>

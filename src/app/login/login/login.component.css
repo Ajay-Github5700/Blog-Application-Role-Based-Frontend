@@ -1,0 +1,14 @@
+.container{
+    margin-top:100px;
+    width: 400px;
+    background-image: url('https://img.freepik.com/premium-photo/purple-background-with-white-lines-purple-background_1293392-5802.jpg?ga=GA1.1.1700682945.1715361201&semt=ais_hybrid');
+
+}
+
+.req-valid{
+    color:bisque;
+    font-family: cursive;
+    font-size: small;
+    margin-top:3px;
+    margin-left:15px;
+}

@@ -1,0 +1,8 @@
+.card-text{
+    overflow: hidden; /* Hides overflowing text */
+    display: block; /* Ensures proper layout */
+    max-height: 6em; /* Adjust this based on your line height (e.g., 1.5em × 4 lines = 6em) */
+    line-height: 1.5em; /* Controls spacing between lines */
+    text-overflow: ellipsis; /* Adds '...' to truncated text */
+    white-space: normal; 
+}

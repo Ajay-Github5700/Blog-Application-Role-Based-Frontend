@@ -1,0 +1,22 @@
+.register-div{
+    background-image: url('https://img.freepik.com/free-vector/colored-points-connected-net_1048-12426.jpg?ga=GA1.1.1700682945.1715361201&semt=ais_hybrid');
+}
+
+.container{
+    margin-top: 100px;
+    width: 400px;
+    background-image: url('https://img.freepik.com/premium-photo/purple-background-with-white-lines-purple-background_1293392-5802.jpg?ga=GA1.1.1700682945.1715361201&semt=ais_hybrid');
+}
+::placeholder{
+    opacity: 50%;
+    font-family: cursive;
+}
+
+.req-valid{
+    color: bisque;
+    font-family: cursive;
+    font-size: small;
+    margin-top:3px;
+    margin-left:15px;
+}
+

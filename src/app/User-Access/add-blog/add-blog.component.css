@@ -1,0 +1,14 @@
+::placeholder{
+    opacity: 75%;
+    font-family:'Times New Roman', Times, serif;
+}
+
+p{
+    color: rgb(213, 42, 42);
+    font-style: italic;
+    font-size: small;
+}
+
+.sub-btn{
+    margin-left: 100px;
+}

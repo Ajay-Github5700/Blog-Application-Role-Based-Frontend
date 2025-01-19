@@ -1,0 +1,21 @@
+<div class="d-flex flex-wrap"> 
+    <div class="my-2 " *ngFor="let i of myBlogs">  
+        <div class="card ms-2" style="width: 18rem;">
+          <div class="rounded-2">
+            <img src="{{i.image}}" style="height: 200px;" class="object-fit-cover w-100" alt="Unable to load image">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">{{i.title}}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">{{i.author}}</h6>
+            <p class="card-text">{{i.description}}</p>
+            <div *ngIf="i.approved==true">
+              <p class="fw-semibold fst-italic text-warning-emphasis">Approved on:-{{i.updatedAt | date}}</p>
+            </div>
+            <p *ngIf="i.approved==false && i.rejected==false" class="text-danger-emphasis fw-semibold">Not Approved Yet..!!</p>
+            <p *ngIf="i.rejected==true" class="text-danger-emphasis fw-semibold">Rejected...!!</p>
+            <button class="btn btn-outline-danger ms-5" (click)="rejectBlog(i._id)">Delete</button>
+          </div>
+        </div>
+      </div>
+    
+</div>

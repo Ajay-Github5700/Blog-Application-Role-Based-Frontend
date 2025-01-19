@@ -1,0 +1,18 @@
+.user-navbar{
+    background-color: rgb(57, 183, 183);
+    
+}
+
+#logout{
+    margin-left: 600px;
+}
+
+.logout-btn{
+    background-color: brown;
+}
+
+.logout-alert{
+    position: absolute;
+    margin-left: 470px;
+    z-index: 1;
+}
